@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main class="container">
+        <h1 class="box1">Gestionnaire de tâches</h1>
+
+        <section id="statistics" class="box2">
+            <div class="stat-card">
+                <div class="cercle"></div>
+                <div class="single-card box6 stat-box">
+                    <p id="total-count">0</p>
+                    <p>Total </p> 
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="cercle"></div>
+                <div class="single-card box6 stat-box">
+                    <p id="completed-count">0</p>
+                    <p>Terminées : </p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="cercle"></div>
+                <div class="single-card box6 stat-box">
+                    <p id="pending-count">0</p>
+                    <p>En attente : </p>
+                </div>
+            </div>
+        </section>
+
+        <form id="task-form" class="box3">
+            <!-- <input type="reset" value="reinitialiser"> -->
+             <h3>Ajouter une nouvelle tache</h3>
+             <div class="form-card">
+                 <div class="input-card">
+                     <input id="task-title" type="text" placeholder="Titre de la tâche" class="field-height field-radius">
+                     
+                     <textarea id="task-description" placeholder="Description" class="field-radius"></textarea>
+                     <select id="task-priority" class="priority-select field-radius">
+                         <option value="low"  >Basse</option>
+                         <option value="medium" >Moyenne</option>
+                         <option value="high" >Haute</option>
+                     </select>
+                 </div>
+                <button type="submit" class="add-button field-radius">Ajouter</button>
+             </div>
+            
+        </form>
+
+        <section class="box4 " >
+            <input id="search-input" type="search" placeholder="Rechercher une tâche" class="field-radius field-height">
+
+            <select id="filter-select" class="field-height">
+                <option value="all">Toutes</option>
+                <option value="completed">Terminées</option>
+                <option value="pending">En attente</option>
+            </select>
+        </section>
+
+        <section class="box5">
+            <ul id="task-list">
+            </ul>
+            <div>
+                <label for="notCompleted"  hidden> Non Complété</label>
+                <input type="radio" id="notCompleted" value="0" name="status" checked hidden>
+                <label for="completed"  hidden>Completer</label>
+                <input type="radio" id="completed" value="1" name="status"  hidden>
+            </div>
+            <p id="empty-message" >Aucune tâche pour le moment.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
