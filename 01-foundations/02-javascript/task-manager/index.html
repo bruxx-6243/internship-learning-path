@@ -22,8 +22,7 @@
             </select>
             
             <button type="submit">Ajouter</button>
-            <button type="button">Modifier</button>
-            <button type="button">Supprimer</button>
+            
         </form>
 
         <section id="statistics">
@@ -46,10 +45,10 @@
             <ul id="task-list">
             </ul>
             <div>
-                <label for="notCompleted"> Non Complété</label>
-                <input type="radio" id="notCompleted" value="0" name="status" checked>
-                <label for="completed">Completer</label>
-                <input type="radio" id="completed" value="1" name="status">
+                <label for="notCompleted"  hidden> Non Complété</label>
+                <input type="radio" id="notCompleted" value="0" name="status" checked hidden>
+                <label for="completed"  hidden>Completer</label>
+                <input type="radio" id="completed" value="1" name="status"  hidden>
             </div>
             <p id="empty-message" >Aucune tâche pour le moment.</p>
         </section>
