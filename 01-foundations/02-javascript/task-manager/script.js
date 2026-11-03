@@ -35,8 +35,17 @@ function addTask(event) {
     const isCompleted = checkedStatus.value === "1";
 
     // TODO 3 : Vérifier que le titre n'est pas vide.
+
+    const logngeurDuTitre = title.length;
+    //  title.length est la propriete de la variable title voilà pourquoi on ne la déclare pas
+
     if (title === "") {
         alert("Le titre est obligatoire");
+        return;
+    }
+     
+    if(logngeurDuTitre < 3){
+         alert("Le titre doit avoir plus de 3 caracters");
         return;
     }
 
